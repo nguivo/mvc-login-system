@@ -3,7 +3,7 @@
     "description": "built an MVC framework with PHP from scratch, and then used this to build a login system.",
     "autoload": {
         "psr-4": {
-            "Ngu\\PhpMvc\\": "src/"
+            "app\\": "./"
         }
     },
     "authors": [
