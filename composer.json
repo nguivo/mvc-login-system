@@ -1,0 +1,16 @@
+{
+    "name": "ngu/php-mvc",
+    "description": "built an MVC framework with PHP from scratch, and then used this to build a login system.",
+    "autoload": {
+        "psr-4": {
+            "Ngu\\PhpMvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ngu Ivo Akosung",
+            "email": "nguivo9@gmail.com"
+        }
+    ],
+    "require": {}
+}
