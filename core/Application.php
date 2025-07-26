@@ -14,14 +14,13 @@ class Application
     }
 
 
-    public function run()
+    public function run(): void
     {
-        echo "Hello World!";
-        $this->request->getPath();
+        echo $this->router->resolve();
     }
 
 
-    public static function dnd($var)
+    public static function dnd($var): void
     {
         echo "<pre>";
         var_dump($var);

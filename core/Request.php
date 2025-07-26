@@ -2,6 +2,10 @@
 
 namespace app\core;
 
+/**
+ * @desc this class takes the request string and beaks it into request_uri, method and parameters if any, and returns them
+ *
+ * */
 class Request
 {
 

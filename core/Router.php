@@ -2,6 +2,12 @@
 
 namespace app\core;
 
+/**
+ * @desc This class:
+ * - registers routes from the index.php file
+ * - i.e., when a particular string is requested, which method from what class should be called.
+ * - it also, gets the pieces of the request by making use of the request class, and then invoking the appropriate callback functions. *
+ * */
 class Router
 {
     public Request $request;
@@ -27,11 +33,18 @@ class Router
         $method = $this->request->getMethod();
         $callback = $this->routes[$method][$path] ?? false;
         if($callback === false) {
-            echo "not found!";
-            exit;
+            return "not found!";
+        }
+        if(is_string($callback)) {
+            return $this->renderView($callback);
         }
 
-        echo call_user_func($callback);
+        return call_user_func($callback);
+    }
+
+    private function renderView(string $view)
+    {
+        include_once dirname(__DIR__)."/views/{$view}.php";
     }
 
 
